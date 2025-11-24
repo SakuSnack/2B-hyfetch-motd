@@ -7,7 +7,7 @@ By default, the cute 2B logos I created this for are included.
 
 ### Requirements
 You need to have ``hyfetch`` and one of it's supported backends, such as ``fastfetch`` installed.
-
+Fastfetch config is not included in this repo.
 
 ### How to install
 Run the following in your terminal:
