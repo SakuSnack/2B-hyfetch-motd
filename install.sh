@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #shellcheck disable=SC2086
 
 INSTALL_BIN="$HOME/.local/bin"
