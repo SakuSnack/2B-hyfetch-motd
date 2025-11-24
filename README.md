@@ -5,6 +5,9 @@ Get greeted by a proud 2B when you open your terminal
 This is a script to run hyfetch with a custom logo, randomly chosen from a pool of installed logos.
 By default, the cute 2B logos I created this for are included.
 
+![Screenshot](/res/screenshot.png?raw=true "Screenshot")
+
+
 ### Requirements
 You need to have ``hyfetch`` and one of it's supported backends, such as ``fastfetch`` installed.
 Fastfetch config is not included in this repo.
