@@ -14,6 +14,7 @@ bold=$(tput bold)
 normal=$(tput sgr0)
 
 echo "Installing script to $INSTALL_BIN"
+mkdir -p $INSTALL_BIN
 cp thats-so-random.sh $INSTALL_BIN/ || exit 1
 chmod +x $INSTALL_BIN/thats-so-random.sh || exit 1
 
