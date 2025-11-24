@@ -12,7 +12,7 @@ fi
 bold=$(tput bold)
 normal=$(tput sgr0)
 
-echo "Installing binary to $INSTALL_BIN"
+echo "Installing script to $INSTALL_BIN"
 cp thats-so-random.sh $INSTALL_BIN/ || exit 1
 chmod +x $INSTALL_BIN/thats-so-random.sh || exit 1
 
