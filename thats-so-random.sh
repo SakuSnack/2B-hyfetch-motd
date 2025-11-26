@@ -8,6 +8,21 @@ else
 fi
 logoLocation="$dataLocation/logos"
 
+if [ ! -z $1 ] && [ $1 = "update" ]; then
+	{
+		mkdir -p $dataLocation
+		cd $dataLocation
+		git clone https://github.com/SakuSnack/2B-hyfetch-motd || exit 1
+		cd 2B-hyfetch-motd
+		chmod +x install.sh
+		THATS_SO_RANDOM_UPDATE=1 ./install.sh
+		unset THATS_SO_RANDOM_UPDATE
+		cd ..
+		rm -rf 2B-hyfetch-motd
+		exit 0
+	}
+fi
+
 randomFetch=()
 for logo in $logoLocation/*; do {
 	randomFetch+=("hyfetch --ascii-file $logo")
