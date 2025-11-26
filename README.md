@@ -20,6 +20,12 @@ cd 2B-hyfetch-motd
 chmod +x install.sh
 ./install.sh
 ```
+
+To update to the latest version and install all new logos, if you already installed on 2025-11-26 or later, simply run 
+```
+thats-so-random.sh update
+```
+
 The script will be installed to ``~/.local/bin``
 
 The logos will be installed to ``~/.local/share/thats-so-random/logos``
@@ -35,3 +41,8 @@ For bash: ``~/.bashrc``; for zsh: ``~/.zshrc``; for fish: ``~/.config/fish/confi
 It may work with other shells, but I have only tested these three.
 
 You can also run ``thats-so-random.sh`` directly in your terminal, if you wish.
+
+To update to the latest version and install all new logos, simply run 
+```
+thats-so-random.sh update
+```
