@@ -41,8 +41,3 @@ For bash: ``~/.bashrc``; for zsh: ``~/.zshrc``; for fish: ``~/.config/fish/confi
 It may work with other shells, but I have only tested these three.
 
 You can also run ``thats-so-random.sh`` directly in your terminal, if you wish.
-
-To update to the latest version and install all new logos, simply run 
-```
-thats-so-random.sh update
-```
