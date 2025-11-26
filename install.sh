@@ -22,11 +22,19 @@ echo "Installing logos to $INSTALL_DATA/thats-so-random/logos"
 mkdir -p $INSTALL_DATA/thats-so-random/logos || exit 1
 cp thats-so-random-logos/* $INSTALL_DATA/thats-so-random/logos/ || exit 1
 
-echo ""
-echo "Installation successful. Please add ${bold}thats-so-random.sh${normal} to your shell init file."
-echo "Bash: ~/.bashrc    zsh: ~/.zshrc    fish: ~/.config/fish/config.fish"
-echo ""
-echo "For zsh, add it after ${bold}export PATH=\$HOME/.local/bin:\$PATH${normal}"
-echo "If you use a powerlevel9k or powerlevel20k instant prompt, add ${bold}thats-so-random${normal} before sourcing the instant prompt."
-echo ""
-echo "If you have not configured hyfetch yet, please run ${bold}hyfetch --config${normal} now."
+if [ -z $THATS_SO_RANDOM_UPDATE ]; then
+	{
+		echo ""
+		echo "Installation successful. Please add ${bold}thats-so-random.sh${normal} to your shell init file."
+		echo "Bash: ~/.bashrc    zsh: ~/.zshrc    fish: ~/.config/fish/config.fish"
+		echo ""
+		echo "For zsh, add it after ${bold}export PATH=\$HOME/.local/bin:\$PATH${normal}"
+		echo "If you use a powerlevel9k or powerlevel20k instant prompt, add ${bold}thats-so-random${normal} before sourcing the instant prompt."
+		echo ""
+		echo "If you have not configured hyfetch yet, please run ${bold}hyfetch --config${normal} now."
+	}
+else
+	{
+		echo "Update complete."
+	}
+fi
