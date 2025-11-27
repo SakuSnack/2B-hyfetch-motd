@@ -8,6 +8,16 @@ else
 fi
 logoLocation="$dataLocation/logos"
 
+if [ ! -z $1 ] && [ $1 = "help" ]; then
+	{
+		echo "Options:"
+		echo "help: display this help text"
+		echo "update: Fetch the latest version from github"
+		echo "skip-colour: skip colourizing the logo (uses your fastfetch colour instead)"
+		echo ""
+	}
+fi
+
 if [ ! -z $1 ] && [ $1 = "update" ]; then
 	{
 		mkdir -p $dataLocation
@@ -24,8 +34,15 @@ if [ ! -z $1 ] && [ $1 = "update" ]; then
 fi
 
 randomFetch=()
-for logo in $logoLocation/*; do {
-	randomFetch+=("hyfetch --ascii-file $logo")
-}; done
+
+if [ ! -z $1 ] && [ $1 = "skip-colour" ]; then
+	for logo in $logoLocation/*; do {
+		randomFetch+=("fastfetch --logo $logo")
+	}; done
+else
+	for logo in $logoLocation/*; do {
+		randomFetch+=("hyfetch --ascii-file $logo")
+	}; done
+fi
 
 eval "${randomFetch[$(($RANDOM % ${#randomFetch[@]}))]}"
