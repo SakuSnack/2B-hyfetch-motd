@@ -14,7 +14,6 @@ if [ ! -z $1 ] && [ $1 = "help" ]; then
 		echo "help: display this help text"
 		echo "update: Fetch the latest version from github"
 		echo "skip-colour: skip colourizing the logo (uses your fastfetch colour instead)"
-		echo ""
 		exit 0
 	}
 fi
