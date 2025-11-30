@@ -35,7 +35,7 @@ You can add your own custom logos to this folder and the script will include the
 
 ### How to use
 Add ``thats-so-random.sh`` to your shell init file.
-Optionally use ``thats-so-random.sh skip-colour`` to skip colourizing the logo
+Optionally use ``thats-so-random.sh skip-colour`` to skip colourizing the logo (requires fastfetch)
 
 Running ``thats-so-random.sh help`` will also display all options again.
 
