@@ -1,6 +1,22 @@
 #!/usr/bin/env bash
 #shellcheck disable=SC2086
 
+# install.sh
+# Copyright (C) 2025 SakuSnack
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 INSTALL_BIN="$HOME/.local/bin"
 
 if [ -z $XDG_DATA_HOME ]; then
@@ -29,7 +45,7 @@ if [ -z $THATS_SO_RANDOM_UPDATE ]; then
 		echo "Bash: ~/.bashrc    zsh: ~/.zshrc    fish: ~/.config/fish/config.fish"
 		echo ""
 		echo "For zsh, add it after ${bold}export PATH=\$HOME/.local/bin:\$PATH${normal}"
-		echo "If you use a powerlevel9k or powerlevel20k instant prompt, add ${bold}thats-so-random${normal} before sourcing the instant prompt."
+		echo "If you use a powerlevel9k or powerlevel10k instant prompt, add ${bold}thats-so-random${normal} before sourcing the instant prompt."
 		echo ""
 		echo "If you have not configured hyfetch yet, please run ${bold}hyfetch --config${normal} now."
 	}
