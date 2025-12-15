@@ -16,6 +16,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+# Environment variable to skip printing the message
+[ ! -z $HIDE_MOTD ] && exit 0
+
 dataLocation=""
 if [ -z $XDG_DATA_HOME ]; then
 	dataLocation="$HOME/.local/share/thats-so-random"
