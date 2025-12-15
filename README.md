@@ -44,3 +44,5 @@ For bash: ``~/.bashrc``; for zsh: ``~/.zshrc``; for fish: ``~/.config/fish/confi
 It may work with other shells, but I have only tested these three.
 
 You can also run ``thats-so-random.sh`` directly in your terminal, if you wish.
+
+To skip the entire message, set the ``HIDE_MOTD=1`` environment variable.
