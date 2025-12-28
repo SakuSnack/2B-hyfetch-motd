@@ -16,7 +16,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Environment variable to skip printing the message
 [ ! -z $HIDE_MOTD ] && exit 0
 
 dataLocation=""
@@ -88,7 +87,7 @@ easteregg() {
 	logo_easteregg=$(printf '%s' "$logo_easteregg" | sed -e "s/$name_original_string/$name_replace_string/g")
 
 	# Set (temporary) filename to use in hyfetch/fastfetch later
-	file_easteregg=".2B-choose.easteregg"
+	file_easteregg="/tmp/thats-so-random-2B-choose.easteregg"
 	# Read string to replace from template up above for use later
 	string_to_replace=$(echo "$logo_easteregg" | sed -n '21p')
 	# Set total logo width (this is done manually because wc -c miscounts special characters such as braille glyphs)
@@ -143,15 +142,15 @@ easteregg() {
 
 	# We now have a completed string to put into our logo, so edit the logo and then save it to disk
 	logo_easteregg=$(printf '%s' "$logo_easteregg" | sed -e "s/$string_to_replace/$construct_string/g")
-	printf '%s' "$logo_easteregg" >$logoLocation/$file_easteregg
+	printf '%s' "$logo_easteregg" >$file_easteregg
 
 	# Call hyfetch or fastfetch with the easter egg logo only
 	if [ ! -z $1 ] && [ $1 = "skip-colour" ]; then
-		eval "fastfetch --logo $logoLocation/$file_easteregg"
+		eval "fastfetch --logo $file_easteregg"
 	else
-		eval "hyfetch --ascii-file $logoLocation/$file_easteregg"
+		eval "hyfetch --ascii-file $file_easteregg"
 	fi
-	rm -f $logoLocation/$file_easteregg
+	rm -f $file_easteregg
 	exit 0
 }
 
