@@ -45,6 +45,10 @@ fi
 if [ ! -z $1 ] && [ $1 = "update" ]; then
 	{
 		mkdir -p $dataLocation
+		if [ ! -w "$dataLocation" ]; then
+			printf "%s%s%s is not a writable location, aborting\n" "${bold}" "$dataLocation" "${normal}"
+			exit 1
+		fi
 		cd $dataLocation || exit 1
 		git clone https://github.com/SakuSnack/2B-hyfetch-motd >/dev/null 2>&1 || exit 1
 		(
