@@ -1,7 +1,7 @@
 #shellcheck disable=SC2004,SC2086,SC2231,SC2034
 
 # thats-so-random.sh
-# Copyright (C) 2025 SakuSnack
+# Copyright (C) 2025-2026 SakuSnack
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
